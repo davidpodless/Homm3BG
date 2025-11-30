@@ -18,40 +18,32 @@ msgstr ""
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:4
-#, fuzzy
-#| msgid ""
-#| "We're translating board game rule book from English to [...].  The text "
-#| "is in LaTeX format, and the messages are in GNU gettext po format.  "
-#| "Output just the translated `msgstr` given the `msgid`, maintaining the "
-#| "original formatting and quotes.  Rules:"
 msgid ""
 "We're translating board game rule book from English to [...].  The text is "
 "in LaTeX format, and the messages are in GNU gettext po format.  Rules:"
 msgstr ""
 "We're translating board game rule book from English to Hebrew.  The text is "
-"in LaTeX format, and the messages are in GNU gettext po format.  Output just "
-"the translated `msgstr` given the `msgid`, maintaining the original "
-"formatting and quotes.  Rules:"
+"in LaTeX format, and the messages are in GNU gettext po format.  Rules:"
 
 #. type: Bullet: '1. '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "PO Format Rules. Both msgid and msgstr should:"
-msgstr ""
+msgstr "PO Format Rules. Both msgid and msgstr should:"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Start with an empty quoted string: `\"\"`"
-msgstr ""
+msgstr "Start with an empty quoted string: `\"\"`"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line on a new line"
-msgstr ""
+msgstr "Have each line on a new line"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line surrounded by quotes"
-msgstr ""
+msgstr "Have each line surrounded by quotes"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:17
@@ -66,21 +58,29 @@ msgid ""
 "   \"[...]\\n\"\n"
 "   \"[...]\\n\"\n"
 msgstr ""
+"   - End each quoted line with \\n\n"
+"   Example:\n"
+"   msgid \"\"\n"
+"   \"First line\\n\"\n"
+"   \"Second line\\n\"\n"
+"   msgstr \"\"\n"
+"   \"[...]\\n\"\n"
+"   \"[...]\\n\"\n"
 
 #. type: Bullet: '2. '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "LaTeX Commands"
-msgstr ""
+msgstr "LaTeX Commands"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all whitespace at the start of lines"
-msgstr ""
+msgstr "Preserve all whitespace at the start of lines"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all LaTeX commands exactly as they appear"
-msgstr ""
+msgstr "Keep all LaTeX commands exactly as they appear"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -88,6 +88,8 @@ msgid ""
 "`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
 "`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
 msgstr ""
+"`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
+"`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -96,62 +98,66 @@ msgid ""
 "`\\pagelink{Combatexperience}{Combat}` translates to "
 "`\\pagelink{Combatexperience}{[...]}`."
 msgstr ""
+"`\\pagelink{...}{...}`: The first argument is not translated. For example, "
+"`\\pagelink{Combatexperience}{Combat}` translates to "
+"`\\pagelink{Combatexperience}{[...]}`."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid ""
 "`\\index{...}`: The content within the `\\index{...}` command is translated."
 msgstr ""
+"`\\index{...}`: The content within the `\\index{...}` command is translated."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not translate LaTeX command names"
-msgstr ""
+msgstr "Do not translate LaTeX command names"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not add or remove line breaks (\\n)"
-msgstr ""
+msgstr "Do not add or remove line breaks (\\n)"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain all whitespace around LaTeX commands"
-msgstr ""
+msgstr "Maintain all whitespace around LaTeX commands"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain line breaks exactly as they appear in the source text"
-msgstr ""
+msgstr "Maintain line breaks exactly as they appear in the source text"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Special commands to keep unchanged:"
-msgstr ""
+msgstr "Special commands to keep unchanged:"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "SVG icons (\\svg{damage-yellow})"
-msgstr ""
+msgstr "SVG icons (\\svg{damage-yellow})"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Spacing commands (\\bigskip, \\hsize, etc.)"
-msgstr ""
+msgstr "Spacing commands (\\bigskip, \\hsize, etc.)"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "For tables (like \\hommtable, \\tabularx):"
-msgstr ""
+msgstr "For tables (like \\hommtable, \\tabularx):"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
-msgstr ""
+msgstr "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all cell styling commands (\\darkcell, \\lightcell)"
-msgstr ""
+msgstr "Preserve all cell styling commands (\\darkcell, \\lightcell)"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -162,6 +168,10 @@ msgid ""
 "   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
 "   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
 msgstr ""
+"     - Maintain table column specifications\n"
+"   Example:\n"
+"   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
+"   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:42
@@ -171,6 +181,9 @@ msgid ""
 "Maintain the capitalization of the words as in the original text.\n"
 "If in English there is \"Hero\", the translation should also be capitalized.\n"
 msgstr ""
+"3. Capitalization\n"
+"Maintain the capitalization of the words as in the original text.\n"
+"If in English there is \"Hero\", the translation should also be capitalized.\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:48
@@ -182,16 +195,21 @@ msgid ""
 "The output should be:\n"
 "\"  \\\\pagetarget{Heroes}{[...]} [...]\\n\"\n"
 msgstr ""
+"4. Example\n"
+"Given the following `msgid`:\n"
+"\"  \\\\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\\n\"\n"
+"The output should be:\n"
+"\"  \\\\pagetarget{Heroes}{[...]} [...]\\n\"\n"
 
 #. type: Bullet: '5. '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "Output"
-msgstr ""
+msgstr "Output"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "Output a copyable code block"
-msgstr ""
+msgstr "Output a copyable code block"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
@@ -199,21 +217,23 @@ msgid ""
 "Output just the translated `msgstr` given the `msgid`, maintaining the "
 "original formatting and quotes."
 msgstr ""
+"Output just the translated `msgstr` given the `msgid`, maintaining the "
+"original formatting and quotes."
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "If the code block starts with a line `msgstr \"\"`, omit this line"
-msgstr ""
+msgstr "If the code block starts with a line `msgstr \"\"`, omit this line"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "The block should include the final newline"
-msgstr ""
+msgstr "The block should include the final newline"
 
 #. type: Bullet: '6. '
 #: tools/translation-ai-prompts/prompt.txt:56
 msgid "Specific term translations without capitalization"
-msgstr ""
+msgstr "Specific term translations without capitalization"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:68
@@ -231,6 +251,8 @@ msgid ""
 "   - \"stronghold\" translates to \"[...]\"\n"
 "   - \"tower\" translates to \"[...]\"\n"
 msgstr ""
+"Factions:\n"
+"   - Keep all faction names in English (castle, conflux, cove, dungeon, fortress, inferno, necropolis, rampart, stronghold, tower)\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:89
@@ -257,6 +279,17 @@ msgid ""
 "   - \"units\" translates to \"[...]\"\n"
 "   - \"zealots\" tarnslates to \"[...]\"\n"
 msgstr ""
+"Units:\n"
+"   - Keep all unit names in English (boars, champions, dendroids, dread knights, familiars, griffins, liches, marksmen, zealots)\n"
+"   - \"deck of unit cards\" translates to \"חפיסת יחידות\"\n"
+"   - \"few\" translates to \"מעטים\"\n"
+"   - \"hp\" translates to \"נקודות חיים\"\n"
+"   - \"pack\" translates to \"להקה\"\n"
+"   - \"recruited or reinforced\" translates to \"גויסו או חוזקו\"\n"
+"   - \"reinforce\" translates to \"לחזק\"\n"
+"   - \"reinforced\" translates to \"מחוזק\"\n"
+"   - \"unit cards\" translates to \"קלפי יחידות\"\n"
+"   - \"units\" translates to \"יחידות\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:101
@@ -274,6 +307,17 @@ msgid ""
 "   - \"secondary hero\" translates to \"[...]\"\n"
 "   - \"specialty\" translates to \"[...]\"\n"
 msgstr ""
+"Heroes:\n"
+"   - \"ability\" translates to \"יכולת\"\n"
+"   - \"experience\" translates to \"ניסיון\"\n"
+"   - \"expert effects\" translates to \"אפקטי מומחה\"\n"
+"   - \"hero\" translates to \"גיבור\"\n"
+"   - \"heroes\" translates to \"גיבורים\"\n"
+"   - \"level tracker\" translates to \"מסלול רמה\"\n"
+"   - \"level\" translates to \"רמה\"\n"
+"   - \"main hero\" translates to \"גיבור ראשי\"\n"
+"   - \"secondary hero\" translates to \"גיבור משני\"\n"
+"   - \"specialty\" translates to \"התמחות\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:118
@@ -296,6 +340,22 @@ msgid ""
 "   - \"trading post\" translates to \"[...]\"\n"
 "   - \"water wheel\" translates to \"[...]\"\n"
 msgstr ""
+"Map Locations:\n"
+"   - \"center field\" translates to \"שדה מרכזי\"\n"
+"   - \"central map tile\" translates to \"משבצת מפה מרכזית\"\n"
+"   - \"dragon utopia\" translates to \"אוטופיית הדרקון\"\n"
+"   - \"far map tile\" translates to \"משבצת מפה רחוקה\"\n"
+"   - \"field\" translates to \"שדה\"\n"
+"   - \"locations\" translates to \"מיקומים\"\n"
+"   - \"map tile\" translates to \"משבצת מפה\"\n"
+"   - \"near map tile\" translates to \"משבצת מפה קרובה\"\n"
+"   - \"random town\" translates to \"עיר אקראית\"\n"
+"   - \"revisitable\" translates to \"ניתן לביקור חוזר\"\n"
+"   - \"settlement\" translates to \"יישוב\"\n"
+"   - \"starting (i) map tile\" translates to \"משבצת מפה התחלתית (i)\"\n"
+"   - \"tile\" translates to \"משבצת\"\n"
+"   - \"trading post\" translates to \"עמדת מסחר\"\n"
+"   - \"water wheel\" translates to \"גלגל מים\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:125
@@ -308,6 +368,12 @@ msgid ""
 "   - \"treasure die\" translates to \"[...]\"\n"
 "   - \"valuables\" translates to \"[...]\"\n"
 msgstr ""
+"Resources:\n"
+"   - \"building materials\" translates to \"חומרי בניה\"\n"
+"   - \"resource production tracker\" translates to \"מסלול ייצור משאבים\"\n"
+"   - \"resources\" translates to \"משאבים\"\n"
+"   - \"treasure die\" translates to \"קובית אוצר\"\n"
+"   - \"valuables\" translates to \"חפצי ערך\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:137
@@ -325,6 +391,17 @@ msgid ""
 "   - \"specialty card\" translates to \"[...]\"\n"
 "   - \"spell cards\" translates to \"[...]\"\n"
 msgstr ""
+"Deck-building:\n"
+"   - \"ability card\" translates to \"קלף יכולת\"\n"
+"   - \"deck\" translates to \"חפיסה\"\n"
+"   - \"decks\" translates to \"חפיסות\"\n"
+"   - \"discard pile\" translates to \"ערימת השלכה\"\n"
+"   - \"discard\" translates to \"השלך\"\n"
+"   - \"hand limit\" translates to \"מגבלת יד\"\n"
+"   - \"player decks\" translates to \"חפיסות שחקנים\"\n"
+"   - \"search\" translates to \"חפש\"\n"
+"   - \"specialty card\" translates to \"קלף התמחות\"\n"
+"   - \"spell cards\" translates to \"קלפי לחשים\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:143
@@ -336,6 +413,11 @@ msgid ""
 "   - \"skill card\" translates to \"[...]\"\n"
 "   - \"ai deck\" translates to \"[...]\"\n"
 msgstr ""
+"AI Deck:\n"
+"   - \"magic card\" translates to \"קלף קסם\"\n"
+"   - \"might card\" translates to \"קלף כוח\"\n"
+"   - \"skill card\" translates to \"קלף מיומנות\"\n"
+"   - \"ai deck\" translates to \"חפיסת ai\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:148
@@ -346,6 +428,10 @@ msgid ""
 "   - \"dwelling\" translates to \"[...]\"\n"
 "   - \"population token\" translates to \"[...]\"\n"
 msgstr ""
+"Town:\n"
+"   - \"buildings\" translates to \"מבנים\"\n"
+"   - \"dwelling\" translates to \"מגורים\"\n"
+"   - \"population token\" translates to \"אסימון אוכלוסייה\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:157
@@ -360,6 +446,14 @@ msgid ""
 "   - \"front line\" translates to \"[...]\"\n"
 "   - \"winning combat\" translates to \"[...]\"\n"
 msgstr ""
+"Combat:\n"
+"   - \"arrow tower\" translates to \"מגדל חצים\"\n"
+"   - \"back line\" translates to \"שורה אחורית\"\n"
+"   - \"combat board\" translates to \"לוח קרב\"\n"
+"   - \"combat\" translates to \"קרב\"\n"
+"   - \"damage\" translates to \"נזק\"\n"
+"   - \"front line\" translates to \"שורה קדמית\"\n"
+"   - \"winning combat\" translates to \"ניצחון בקרב\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:166
@@ -375,3 +469,12 @@ msgid ""
 "   - \"round tracker\" translates to \"[...]\"\n"
 "   - \"war machine\" translates to \"[...]\"\n"
 msgstr ""
+"Other:\n"
+"   - \"core rulebook\" translates to \"ספר חוקים\"\n"
+"   - \"effects\" translates to \"אפקטים\"\n"
+"   - \"game setup\" translates to \"הכנת משחק\"\n"
+"   - \"map setup\" translates to \"הכנת מפה\"\n"
+"   - \"player elimination\" translates to \"הדחת שחקן\"\n"
+"   - \"player setup\" translates to \"הכנת שחקנים\"\n"
+"   - \"round tracker\" translates to \"מסלול סיבובים\"\n"
+"   - \"war machine\" translates to \"מכונת מלחמה\"\n"
